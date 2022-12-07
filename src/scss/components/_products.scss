@@ -1,0 +1,81 @@
+.products {
+  &__top {
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 30px;
+    margin-top: -1px;
+    &:before {
+      content: "";
+      display: block;
+      width: 225px;
+      height: 156px;
+      background-image: url("../img/scorpion-1.svg");
+      background-repeat: no-repeat;
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 225px;
+      height: 156px;
+      background-image: url("../img/scorpion-2.svg");
+      background-repeat: no-repeat;
+    }
+  }
+  &__title {
+    max-width: 785px;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 73px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--dark-color);
+    margin: 0 auto;
+  }
+  &__content {
+    position: relative;
+    padding-top: 20px;
+    margin-top: -1px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    padding: 0 20px 20px;
+  }
+  &__decorative {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+
+    svg {
+      &:nth-child(2) {
+        transform: translateX(-15px);
+      }
+      &:nth-child(3) {
+        transform: translateX(15px);
+      }
+    }
+  }
+  &__phrase {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--dark-color);
+    padding: 23px 0;
+  }
+  &__cover {
+    padding: 20px;
+  }
+  &__cover-img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
