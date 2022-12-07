@@ -4,5 +4,11 @@
 @import "fonts";
 @import "settings";
 
-// подключения компонентов страницы
+// подключения секций страницы
 @import "./components/header";
+@import "./components/hero";
+
+// подключения компонентов страницы
+@import "./components/nav";
+@import "./components/logo";
+@import "./components/ticker";

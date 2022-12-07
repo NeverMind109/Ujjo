@@ -90,3 +90,23 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
+
+.border-block {
+  border: 1px solid var(--dark-color);
+}
+.flex {
+  display: flex;
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--light-color);
+  padding: 15px 44px;
+  background-color: var(--accent-color);
+  border: none;
+  cursor: pointer;
+}
