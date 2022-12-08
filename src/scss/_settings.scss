@@ -14,7 +14,7 @@ html {
 }
 .page__body {
   margin: 0;
-  min-width: 320px;
+  min-width: 375px;
   min-height: 100%;
   font-size: 16px;
 }
@@ -27,10 +27,17 @@ a {
   text-decoration: none;
 }
 .site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  overflow: hidden;
+
+  @include big-desktop {
+    max-width: 1430px;
+  }
+  @include tablet {
+    min-width: auto;
+  }
 }
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
 }
 .btn-reset {
   border: none;
@@ -96,6 +103,11 @@ a {
 }
 .flex {
   display: flex;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .btn {
   display: inline-block;
@@ -109,4 +121,8 @@ a {
   background-color: var(--accent-color);
   border: none;
   cursor: pointer;
+  transition: color 0.3s ease;
+  &:hover {
+    color: var(--dark-color);
+  }
 }

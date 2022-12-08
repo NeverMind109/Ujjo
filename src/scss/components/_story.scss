@@ -1,0 +1,81 @@
+.story {
+  &__block {
+    margin-top: -1px;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-right: 1px solid var(--dark-color);
+
+    @include tablet {
+      width: 100%;
+      border-right: 0;
+    }
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 65px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--dark-color);
+    padding: 50px 80px;
+    margin: 0 auto auto;
+
+    @include tablet {
+      padding: 25px 0;
+    }
+    @include mobile {
+      font-size: 45px;
+      line-height: 50px;
+    }
+  }
+  &__img {
+    display: block;
+
+    @include tablet {
+      margin: 0 auto;
+    }
+  }
+  &__right {
+    width: 50%;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &__content {
+    aspect-ratio: 1/1;
+    padding: 135px 0;
+    background-image: url("../img/story-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include tablet {
+      padding: 170px 0;
+    }
+  }
+  &__descr {
+    max-width: 390px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--dark-color);
+    margin: 0 auto;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    @include mobile {
+      padding: 0 15px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

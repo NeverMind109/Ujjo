@@ -28,4 +28,11 @@
     color: var(--dark-color);
     margin: 0 0 14px;
   }
+
+  @include tablet {
+    min-height: 700px;
+  }
+  @include mobile {
+    min-height: 500px;
+  }
 }

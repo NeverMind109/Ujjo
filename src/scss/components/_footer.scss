@@ -1,0 +1,31 @@
+.footer {
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 93px;
+    background-color: var(--bg-color);
+
+    @include mobile {
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+    }
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--dark-color);
+  }
+  &__link {
+    border-bottom: 1px solid var(--bg-color);
+    transition: border 0.3s ease;
+    &:hover {
+      border-bottom: 1px solid var(--dark-color);
+    }
+  }
+}

@@ -11,6 +11,13 @@
       height: 156px;
       background-image: url("../img/scorpion-1.svg");
       background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include mobile {
+        width: 100px;
+        height: 70px;
+      }
     }
     &:after {
       content: "";
@@ -19,6 +26,13 @@
       height: 156px;
       background-image: url("../img/scorpion-2.svg");
       background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include mobile {
+        width: 100px;
+        height: 70px;
+      }
     }
   }
   &__title {
@@ -31,6 +45,15 @@
     text-transform: uppercase;
     color: var(--dark-color);
     margin: 0 auto;
+
+    @include tablet {
+      max-width: none;
+      padding: 40px 0;
+    }
+    @include mobile {
+      font-size: 45px;
+      line-height: 50px;
+    }
   }
   &__content {
     position: relative;
@@ -42,6 +65,14 @@
     flex-wrap: wrap;
     gap: 26px;
     padding: 0 20px 20px;
+  }
+  &__item {
+    @include tablet {
+      width: calc(50% - 13px);
+    }
+    @include mobile {
+      width: 100%;
+    }
   }
   &__decorative {
     position: absolute;
@@ -60,6 +91,10 @@
       &:nth-child(3) {
         transform: translateX(15px);
       }
+    }
+
+    @include tablet {
+      display: none;
     }
   }
   &__phrase {
