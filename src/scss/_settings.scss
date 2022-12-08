@@ -7,6 +7,10 @@ html {
 *::after {
   box-sizing: inherit;
 }
+html,
+body {
+  min-width: 375px;
+}
 .page {
   height: 100%;
   font-family: var(--font-family, sans-serif);
